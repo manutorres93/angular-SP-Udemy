@@ -1,0 +1,29 @@
+<h1>Usuarios registrados</h1>
+<p>{{name}}</p>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Método</td>
+  <dd>{{ getUserDescription() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{capitalizedName}}</dd>
+
+
+</dl>
+
+<button
+*ngIf="name!== 'Manuela'"
+ class="btn btn-primary mx-2"
+ (click)="changeName()" >
+ Cambiar nombre</button>
+
+<button *ngIf="age!== 29" class="btn btn-primary" (click)="changeAge()">Cambiar edad</button>
+
+<button  class="btn btn-primary" (click)="resetForm()">Resetear</button>
+

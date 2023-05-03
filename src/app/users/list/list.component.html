@@ -1,0 +1,27 @@
+<p>Listado de Usuarios</p>
+
+<!-- <ul class="mt-2 list-group">
+  <li class="list-group-item">Veronica</li>
+  <li class="list-group-item">Manuela</li>
+  <li class="list-group-item">Monica</li>
+  <li class="list-group-item">Jaime</li>
+</ul> -->
+<ul class="mt-2 list-group">
+  <li *ngFor="let nombre of userNames"
+  class="list-group-item">{{nombre}}</li>
+</ul>
+
+<button
+   (click)="removeLastUser()"
+   class="btn btn-outline-danger">
+  Borrar último registro
+</button>
+
+<div *ngIf="deletedUser">
+<h3>Usuario borrado:<small class="Text-danger">{{deletedUser}}</small></h3>
+</div>
+
+<h3>No ha borrado nada</h3>
+
+<br>
+<br>
